@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useRouter } from "next/router";
-import SearchItem from "../components/searchItems/searchItems";
+import SearchItem from "../components/searchItem/searchItems";
 import Footer from "../components/Footer/Footer";
 import MailList from "../components/MailList/MailList";
 import Details from "../Atoms/flightsData";

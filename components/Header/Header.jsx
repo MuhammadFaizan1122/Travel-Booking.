@@ -12,7 +12,7 @@ import { useRecoilState } from "recoil";
 import { useState } from "react";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
-import { Link } from "next/Link";
+import { Link } from "next/link";
 import Details from "../../Atoms/flightsData";
 import { useRouter } from "next/router";
 
