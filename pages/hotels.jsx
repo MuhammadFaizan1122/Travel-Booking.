@@ -39,10 +39,9 @@ const Hotels = () => {
                 <span
                   className="h-[30px] p-[5px] bg-white flex justify-center cursor-pointer"
                   onClick={() => setOpenDate(!openDate)}
-                >{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
-                  date[0].endDate,
-                  "MM/dd/yyyy"
-                )}`}</span>
+                >{`${
+                  date && format(date[0].startDate, "MM/dd/yyyy")
+                } to ${date &&format(date[0].endDate, "MM/dd/yyyy")}`}</span>
                 {openDate && (
                   <DateRange
                     onChange={(item) => setDate([item.selection])}
