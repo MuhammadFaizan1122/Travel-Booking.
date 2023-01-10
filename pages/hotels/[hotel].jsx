@@ -90,7 +90,7 @@ const Hotel = () => {
           </button>
           <h1 className="text-[24px]">Tower Street Apartments</h1>
           <div className="text-[24px] flex items-center gap-[10px]">
-            <FontAwesomeIcon icon={faLocationDot} />
+            <FontAwesomeIcon className="w-[20px]" icon={faLocationDot} />
             <span>Elton St 125 New york</span>
           </div>
           <span className="text-[#0071c2] font-medium">
