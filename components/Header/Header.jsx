@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faBed,
   faPlane,
@@ -11,18 +10,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useRecoilState } from "recoil";
 import { useState } from "react";
-import { addDays } from "date-fns";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
-import Link from "next/link";
-import FlightsDetail from "../../Atoms/flightsData";
+import { Link } from "next/Link";
+import Details from "../../Atoms/flightsData";
 import { useRouter } from "next/router";
 
 export default function Header({ type }) {
-  const router = useRouter();
+  
   const [openDate, setOpenDate] = useState(false);
   const [optionOpen, setOptionOpen] = useState(false);
-  const [flights, setFligths] = useRecoilState(FlightsDetail);
+  const [flights, setFligths] = useRecoilState(Details);
+  const router = useRouter();
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -46,7 +45,7 @@ export default function Header({ type }) {
     });
   };
   const handleSearch = () => {
-    router.push("/hotels", { data: { date, destination, options } });
+    router.push('/hotels')
     setFligths({ date, destination, options });
   };
 
@@ -201,14 +200,12 @@ export default function Header({ type }) {
                 )}
               </div>
               <div className="flex">
-                {/* <Link href="/hotels"> */}
-                <button
-                  className="bg-[#D287FA] px-[15px] py-[10px] border-none outline-none text-white"
-                  onClick={() => handleSearch()}
-                >
-                  Search
-                </button>
-                {/* </Link> */}
+                  <button
+                    className="bg-[#D287FA] px-[15px] py-[10px] border-none outline-none text-white"
+                    onClick={() => handleSearch()}
+                  >
+                    Search
+                  </button>
               </div>
             </div>
           </>

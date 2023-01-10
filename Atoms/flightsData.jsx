@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 
-const FlightsDetail = atom({
-  key: "FlightsDetail", // unique ID (with respect to other atoms/selectors)
-  default: {}, // default value (aka initial value)
+const Details = atom({
+  key: "FlightsDetail",
+  default: {}, 
 });
-export default FlightsDetail;
+export default Details;

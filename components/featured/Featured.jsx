@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Featured() {
   return (
     <div className="w-[100%] max-w-[1024px] flex space-between z-10 gap-[30px]">

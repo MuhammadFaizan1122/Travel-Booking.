@@ -1,24 +1,22 @@
 import Navbar from "../components/navbar/Navbar";
-import Header from "../components/header/Header";
+import Header from "../components/Header/Header";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useRouter } from "next/router";
-import FlightsDetail from "../Atoms/flightsData";
 import SearchItem from "../components/searchItems/searchItems";
 import Footer from "../components/Footer/Footer";
 import MailList from "../components/MailList/MailList";
+import Details from "../Atoms/flightsData";
 
-const List = () => {
-  const [flights, setFligths] = useRecoilState(FlightsDetail);
-  const router = useRouter();
-  // const location = useLocation();
+const Hotels = () => {
+  const [flights, setFligths] = useRecoilState(Details);
   const [destination, setDestination] = useState(flights.destination);
   const [date, setDate] = useState(flights.date);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(flights.options);
-  console.log(flights.options);
+
   return (
     <div>
       <div>
@@ -119,11 +117,11 @@ const List = () => {
         </div>
       </div>
       <div className="mt-[50px] flex flex-col	items-center gap-[30px]">
-          <MailList />
+        <MailList />
         <Footer />
       </div>
     </div>
   );
 };
 
-export default List;
+export default Hotels;
